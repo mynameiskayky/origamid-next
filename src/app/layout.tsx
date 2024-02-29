@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Origamid Next",
@@ -13,7 +14,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        <ul className="menu">
+          <li><Link href={'/'}>Home</Link></li>
+          <li><Link href={'/imc'}>Calcular IMC</Link></li>
+        </ul>
+        {children}
+      </body>
     </html>
   );
 }
