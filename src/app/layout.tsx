@@ -17,6 +17,7 @@ export default function RootLayout({
       <body>
         <ul className="menu">
           <li><Link href={'/'}>Home</Link></li>
+          <li><Link href={'/cursos'}>Cursos</Link></li>
           <li><Link href={'/imc'}>Calcular IMC</Link></li>
         </ul>
         {children}
